@@ -16,19 +16,19 @@ namespace CMP1903M_Assessment_1_Base_Code
 
             //Create 'Input' object
             //Get either manually entered text, or text from a file
-
+            Input input = new Input();
+            string text = input.whichTextInput();
 
             //Create an 'Analyse' object
             //Pass the text input to the 'analyseText' method
-
+            Analyse analyse = new Analyse();
 
             //Receive a list of integers back
-
+            parameters = analyse.analyseText(text);
 
             //Report the results of the analysis
-
-
-            //TO ADD: Get the frequency of individual letters?
+            Report report = new Report();
+            report.outputConsole(parameters);
 
            
         }
